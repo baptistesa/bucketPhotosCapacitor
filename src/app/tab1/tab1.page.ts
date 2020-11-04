@@ -30,8 +30,6 @@ export class Tab1Page {
       alpha: 1
     }
 
-    alert('ok');
-
     // start camera
     this.cameraPreview.startCamera(cameraPreviewOpts).then(
       (res) => {
@@ -47,6 +45,7 @@ export class Tab1Page {
     if (this.platform.is("ios")) {
       this.cameraPreview.takePicture(this.pictureOpts).then((imageData) => {
         this.picture = 'data:image/jpeg;base64,' + imageData;
+        this.sendPicture(this.picture)
       }, (err) => {
         console.log(err);
         this.picture = 'assets/img/test.jpg';
