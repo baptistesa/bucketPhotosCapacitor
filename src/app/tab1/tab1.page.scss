@@ -1,0 +1,21 @@
+html,
+body,
+.ion-app,
+.ion-content,
+ion-content,
+.test,
+.scroll-content {
+  background-color: transparent;
+  --background: transparent;
+}
+
+app-tab1 ion-content {
+  --background: transparent;
+}
+
+
+.bouton {
+  position: absolute;
+  bottom: 5rem;
+  text-align: center;
+}
